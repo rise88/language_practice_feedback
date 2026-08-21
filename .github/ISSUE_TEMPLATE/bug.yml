@@ -1,1 +1,58 @@
-a
+name: Bug
+description: Something broken in Vocalis
+title: "[bug] "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for reporting. Anyone with a GitHub account can file here.
+        Prefer Chrome or Edge details for microphone issues.
+  - type: dropdown
+    id: where
+    attributes:
+      label: Where
+      options:
+        - Prononcer
+        - Cartes
+        - Atelier (Écouter / Lire / Sens)
+        - Grammaire
+        - Genre
+        - Écrire
+        - Ajouter / packs
+        - Compte & sync
+        - Aide
+        - Other / not sure
+    validations:
+      required: true
+  - type: input
+    id: browser
+    attributes:
+      label: Browser & device
+      placeholder: e.g. Chrome on Android, Safari iPhone, Edge Windows
+    validations:
+      required: true
+  - type: input
+    id: langs
+    attributes:
+      label: Practice language + UI language
+      placeholder: e.g. French practice, English menus
+  - type: textarea
+    id: what
+    attributes:
+      label: What happened
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1.
+        2.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected
