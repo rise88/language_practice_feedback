@@ -1,0 +1,36 @@
+name: Petition / idea
+description: Feature or content request
+title: "[petition] "
+labels: ["petition"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Ask for a feature, more content, or a classroom workflow improvement.
+  - type: dropdown
+    id: kind
+    attributes:
+      label: Kind
+      options:
+        - Feature
+        - Content (vocab / grammar / sounds)
+        - Classroom / teacher workflow
+        - Accessibility
+        - Other
+    validations:
+      required: true
+  - type: textarea
+    id: ask
+    attributes:
+      label: What should Vocalis do?
+    validations:
+      required: true
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it helps (class, level, frequency…)
+  - type: input
+    id: who
+    attributes:
+      label: Your name or class (optional)
+      placeholder: Helps us group petitions from the same group
